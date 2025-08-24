@@ -1,0 +1,22 @@
+{
+  "name": "registration-form",
+  "version": "1.0.0",
+  "main": "registration.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "body-parser": "^2.2.0",
+    "cors": "^2.8.5",
+    "dotenv": "^17.2.1",
+    "exceljs": "^4.4.0",
+    "express": "^5.1.0",
+    "mongoose": "^8.18.0",
+    "node.js": "^0.0.1-security",
+    "nodemailer": "^7.0.5"
+  }
+}

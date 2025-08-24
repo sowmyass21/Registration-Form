@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registered users</title>
+<link rel="stylesheet" href="registration.css"> <!-- reuse your CSS -->
+</head>
+<body>
+  <div id="container">
+    <header><h2>Registered Users</h2>
+      <p>View all registered users</p></header>
+    <div id="form-container">
+      
+    <div class="header-row">
+        <p class="totalUsers" id="userCount">Total Users: 0</p>
+        <button class="download-btn" id="downloadExcel" onclick="downloadExcel()">⬇ Download Excel</button>
+      </div>
+      <table id="usersTable">
+        <thead>
+          <tr>
+            <th>S.No</th>
+            <th>Full Name</th>
+            <th>Registration Date</th>
+            <th>Programme</th>
+            <th>Department</th>
+            <th>Email</th>
+            <th>Phone</th>
+            <th>Alt Phone</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </div>
+  </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
+  <script src="registration.js">
+  </script>
+</body>
+</html>

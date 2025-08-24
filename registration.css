@@ -1,0 +1,232 @@
+html, body {
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    color: #333;
+    background: linear-gradient(to right, hsl(301, 83%, 79%), #cf7e99);
+}
+
+.container{
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+.form-container{
+    background: white;
+    border-radius: 12px;
+    padding: 20px;
+    height:80%;
+    width:100%;
+    max-width:700px;
+    text-align: center;
+}
+.form-card{
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.8);
+    padding: 16px;
+    margin-bottom: 16px;
+    height:75%;
+}
+.form-container h2 {
+    margin-bottom: 10px;
+    color: #333;
+}
+.form-container p {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 20px;
+}
+.form-group label {
+    flex: 0 0 160px; /* fixed width */
+    font-weight: bold;
+    color: #333;
+    margin: 0; /* remove extra top/bottom margins */
+    padding: 10px; /* space between label & input */
+    text-align: left; /* align text to the right for neat look */
+}
+input[type="text"],
+input[type="date"],
+input[type="email"] {
+    flex: 1;  /* take up remaining space */
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 14px;
+    margin:0;
+    transition: 0.3s;}
+input[type="radio"] {
+    margin: 2px;
+}
+.programme-options {
+    display: flex;
+    justify-content: flex-start;
+}
+.programme-options label {
+    display: flex;
+    flex-direction: column;   /* stack vertically */
+    align-items: center;      /* center text under button */
+    font-weight: normal;
+    cursor: pointer;
+}
+.form-group {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+.form-group input:focus {
+    border-color:rgb(77, 75, 75);
+    outline: none;
+}
+.btn{
+    background-color: rgb(7, 153, 7);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 18px;
+}
+/*registered users.css*/
+h2 {
+  font-size: 28px;
+  font-weight: 600;
+  margin-bottom: 5px;
+  color:white;
+  display: flex;
+  flex-direction: center; 
+  gap: 8px;  
+}
+
+p {
+  color: #666;
+  margin-bottom: 20px;
+}
+.header-row{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+#usersTable {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+  font-size: 14px;
+}
+
+#usersTable thead {
+  background: #3498db;
+  color: white;
+}
+
+#usersTable th, #usersTable td {
+  padding: 12px 15px;
+  text-align: left;
+  border-bottom: 1px solid #eaeaea;
+}
+
+#usersTable tbody tr:nth-child(even) {
+  background: #f9f9f9;
+}
+
+#usersTable tbody tr:hover {
+  background: #ecf5ff;
+}
+@media (max-width: 768px) {
+  #container {
+    padding: 20px;
+  }
+
+  #usersTable thead {
+    display: none;
+  }
+
+  #usersTable, #usersTable tbody, #usersTable tr, #usersTable td {
+    display: block;
+    width: 100%;
+  }
+
+  #usersTable tr {
+    margin-bottom: 15px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+    padding: 12px;
+  }
+
+  #usersTable td {
+    padding: 10px;
+    text-align: right;
+    position: relative;
+  }
+
+  #usersTable td::before {
+    content: attr(data-label);
+    position: absolute;
+    left: 12px;
+    font-weight: 600;
+    color: #2c3e50;
+    text-align: left;
+  }
+}
+.table-wrapper {
+  
+  width: 100%;
+    max-width: 1000px;
+    overflow-x: auto;
+    margin-bottom: 20px;
+}
+.totalUsers {
+  font-weight: 500;
+  font-size: 16px;
+  color: #2c3e50;
+}
+
+.download-btn
+{  background:rgb(70, 182, 70);
+  color: white;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: all 0.3s ease;
+}
+header {
+    display: flex;       /* needed for justify-content to work */
+    flex-direction: column; /* stack h2 and p vertically */
+    align-items: center; /* horizontally center children */
+    margin-bottom: 30px;
+    height:20vh;
+    justify-content: center;
+  
+}
+header p{
+    color:rgb(232, 228, 228);
+    text-align:center;
+}
+h2{
+    color:white;
+    text-align:center;
+}
+#form-container{
+    background: white;
+    border-radius: 12px;
+    padding: 20px;
+    width:100%;
+    max-width:1000px;
+    text-align: center;
+}
+#container{
+    min-height: 100vh;
+    display: flex;
+    
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}

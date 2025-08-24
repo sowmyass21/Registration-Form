@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>REGISTRATION FORM</title>
+    <link rel="stylesheet" href="registration.css"> 
+</head>
+<body>
+    <div class="container">
+        <div class="form-container">
+            <h2>REGISTRATION FORM</h2>
+            <p>Please fill out the form below to register</p>
+            <div class="form-card">
+                <form id="regForm" action="http://localhost:5000/register" method="POST">
+                    <div class="form-group" >
+    <label>Full Name</label>
+    <input type="text" name="fullname" required id="fullname">
+</div>
+
+<div class="form-group" >
+    <label>Registration Date</label>
+    <input type="date" name="regdate" required id="regdate">
+</div>
+
+<div class="form-group">
+    <label>Programme</label>
+    <div class="programme-options">
+        <label><input type="radio" name="programme" value="btech" > B.Tech</label>
+        <label><input type="radio" name="programme" value="mtech" > M.Tech</label>
+        <label><input type="radio" name="programme" value="phd"  > PhD</label>
+    </div>
+</div>
+
+<div class="form-group" >
+    <label>Department Field</label>
+    <input required type="text" name="department" id="department">
+</div>
+<div class="form-group" >
+<label>Email Address</label>
+<input type="email" required name="email" id="email">
+    </div>
+    <div class="form-group" >
+<label>Phone Number</label>
+<input type="text" required name="phone" id="phone" pattern="[0-9]{10}">
+    </div>
+    <div class="form-group" >
+<label>Alternate Number</label>
+<input type="text" required name="altphone" id="altphone" pattern="[0-9]{10}">
+    </div>
+<button type="submit" class="btn">
+    submit
+</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script src="registration.js"></script>
+</body>
+</html>
