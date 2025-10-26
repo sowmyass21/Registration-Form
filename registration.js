@@ -27,7 +27,7 @@ document.addEventListener("DOMContentLoaded", () => {
       };
 
       try {
-        const response = await fetch("http://Registration-Form.onrender.com/register", {
+        const response = await fetch("https://registration-form.onrender.com/register", {
           method: "POST",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify(data)

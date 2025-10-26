@@ -64,8 +64,8 @@ app.post("/register",async(req,res)=>{
         console.log("✅ Email sent:", info.response);
       }
     });
-    res.json({message:"registered successfully"});
-
+    
+    res.redirect("/submisssion.html");
     }
     catch(err){
       console.log("Save error:",err);
@@ -86,8 +86,6 @@ app.get("/export", async (req, res) => {
       { header: "Phone", key: "phone", width: 15 },
       { header: "Alternate Phone", key: "altphone", width: 15 }
     ];
-        
-
     users.forEach(user => worksheet.addRow(user.toObject()));
     res.setHeader(
       "Content-Type",
