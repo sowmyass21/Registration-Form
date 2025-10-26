@@ -20,5 +20,9 @@
     "mongoose": "^8.18.0",
     "node.js": "^0.0.1-security",
     "nodemailer": "^7.0.5"
+  },
+  "devDependencies": {
+    "vite": "^5.0.0",
+    "@vitejs/plugin-react": "^4.2.0"
   }
 }
