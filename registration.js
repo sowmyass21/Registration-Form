@@ -34,8 +34,13 @@ document.addEventListener("DOMContentLoaded", () => {
         });
 
         if (!response.ok) throw new Error("Server responded with error status!");
-
-        e.target.reset();
+         
+        const resJson = await response.json();
+        if (resJson && resJson.message === "registered successfully") {
+          window.location.href = "submisssion.html";
+        } else {
+          alert("Registration failed on server!");
+        }
 
         // Update table if exists
         updateUsersTableRow(data);
