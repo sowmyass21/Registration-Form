@@ -8,7 +8,7 @@ document.addEventListener("DOMContentLoaded", () => {
       e.preventDefault();
       submitBtn.disabled = true;
       submitBtn.textContent = "Submitting...";
-       window.location.href = "submisssion.html"; 
+
       // Defensive check for programme radio buttons
       const programSelected = document.querySelector('input[name="programme"]:checked');
       if (!programSelected) {
@@ -34,9 +34,10 @@ document.addEventListener("DOMContentLoaded", () => {
         });
 
         if (!response.ok) throw new Error("Server responded with error status!");
-         
+
         const resJson = await response.json();
         if (resJson && resJson.message === "registered successfully") {
+          // Relative path works if submisssion.html is at root of static/public folder
           window.location.href = "submisssion.html";
         } else {
           alert("Registration failed on server!");
@@ -59,7 +60,7 @@ document.addEventListener("DOMContentLoaded", () => {
     if (!usersTable || !userCountEl) return;
 
     try {
-      const res = await fetch("http://localhost:5000/all-data");
+      const res = await fetch("https://registration-form.onrender.com/all-data");
       if (!res.ok) throw new Error("Failed to fetch users.");
       const users = await res.json();
 
@@ -120,7 +121,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const downloadBtn = document.getElementById("downloadExcel");
   if (downloadBtn) {
     downloadBtn.addEventListener("click", () => {
-      window.location.href = "http://localhost:5000/export";
+      window.location.href = "https://registration-form.onrender.com/export";
     });
   }
 });
