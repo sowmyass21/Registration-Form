@@ -74,9 +74,7 @@ app.post("/register", async (req, res) => {
       }
     });
 
-    // Classic form POST: redirect to success page.
-    // If using AJAX/JS, change to "res.json({message:'registered successfully'})"
-    res.redirect("/submisssion.html");
+    res.json({ message: "registered successfully" });
   } catch (err) {
     console.log("Save error:", err);
     res.status(500).json({ error: err.message });
